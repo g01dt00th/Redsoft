@@ -13,7 +13,6 @@ struct BasketDetailView: View {
     
     @State private var basketArray = [BasketModel]()
     
-   
     var body: some View {
         VStack {
             HStack {
@@ -38,21 +37,31 @@ struct BasketDetailView: View {
                 }
             }
             
-            Button("Оформить", action: {
-                // action here
-            })
+            Divider()
             
+            HStack {
+                Button("Оформить", action: {
+                    self.basketArray.removeAll()
+                    self.basket.list.forEach { _, value in
+                        self.basketArray.append(value)
+                    }
+                }).padding()
+                
+                Divider()
+                Button(action: {
+                    self.basketArray.removeAll()
+                    self.basket.list.removeAll()
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("Очистить корзину")
+                }).padding()
+            }.frame(height: 30)
             
-            Button(action: {
-                self.basketArray.removeAll()
-                self.basket.list.removeAll()
-                self.presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Text("Очистить корзину")
-            }).padding()
+            Divider()
+            .padding(.bottom)
             
-        }.navigationBarHidden(true)
-        .navigationBarTitle("")
+        }.navigationBarTitle("")
+        .navigationBarHidden(true)
         .onAppear {
             self.basket.list.forEach { _, value in
                 self.basketArray.append(value)
