@@ -16,7 +16,7 @@ class JSONViewModel: ObservableObject {
     @Published var filter = ""
 
     //MARK: - TimeInterval for filter execution delay
-    private let filterExecuteDelay: TimeInterval = 0.3
+    private let filterExecuteDelay: TimeInterval = 0.4
 
     private var isAllreadyExecuted = false
     

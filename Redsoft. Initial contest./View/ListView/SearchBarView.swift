@@ -25,6 +25,7 @@ struct SearchBarView: View {
                     self.viewModel.list.removeAll()
                     self.viewModel.startFrom = 0
                     self.viewModel.loadData()
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {
                     Image(systemName: "arrow.left")
                         .foregroundColor(.secondary)
