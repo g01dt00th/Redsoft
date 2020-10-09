@@ -32,7 +32,7 @@ struct BasketDetailView: View {
             
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
-                    ForEach(self.basketArray, id: \.id) { item in
+                    ForEach(basketArray) { item in
                         ProductItemView(product: Product(id: item.id, title: item.title, shortDescription: item.shortDescription, imageURL: item.imageURL, amount: item.amount, price: item.price, producer: item.producer, categories: item.categories)).padding(.horizontal)
                     }
                 }

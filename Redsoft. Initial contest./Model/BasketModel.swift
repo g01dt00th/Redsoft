@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BasketModel {
+struct BasketModel: Identifiable {
  
     let id: Int
     let title, shortDescription: String

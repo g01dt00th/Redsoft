@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProductListView: View {
     @EnvironmentObject var viewModel: JSONViewModel
-    @EnvironmentObject var basket: BasketViewModel
     
     var body: some View {
         NavigationView {
