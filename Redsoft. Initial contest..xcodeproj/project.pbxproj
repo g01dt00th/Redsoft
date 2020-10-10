@@ -26,6 +26,7 @@
 		B420C44C2528E481003769DD /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B420C44B2528E481003769DD /* ProductItemView.swift */; };
 		B497827B252A3B1A00DEA19A /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497827A252A3B1A00DEA19A /* UrlImageView.swift */; };
 		B4978280252A4C0D00DEA19A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497827F252A4C0D00DEA19A /* SearchBarView.swift */; };
+		B4C4FDAD2532498F0038AF9D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4FDAC2532498F0038AF9D /* ActivityView.swift */; };
 		B4D461D82528EF9E002D2B03 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D461D72528EF9E002D2B03 /* UrlImageModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		B420C44B2528E481003769DD /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		B497827A252A3B1A00DEA19A /* UrlImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		B497827F252A4C0D00DEA19A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B4C4FDAC2532498F0038AF9D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		B4D461D72528EF9E002D2B03 /* UrlImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				B4130B2325278FEF00AC9CD5 /* ContentView.swift */,
 				B4130B3C2527923B00AC9CD5 /* DetailView */,
 				B4130B3B2527923300AC9CD5 /* ListView */,
+				B4C4FDAC2532498F0038AF9D /* ActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				B420C4492528E3CC003769DD /* ProductListView.swift in Sources */,
 				5E09B39C252F287C009F8D2B /* BasketDetailView.swift in Sources */,
 				5EF64F8F25306EA8000E8E8F /* BasketInDetailView.swift in Sources */,
+				B4C4FDAD2532498F0038AF9D /* ActivityView.swift in Sources */,
 				B4130B2025278FEF00AC9CD5 /* AppDelegate.swift in Sources */,
 				B497827B252A3B1A00DEA19A /* UrlImageView.swift in Sources */,
 				B4130B492527973E00AC9CD5 /* JSONViewModel.swift in Sources */,

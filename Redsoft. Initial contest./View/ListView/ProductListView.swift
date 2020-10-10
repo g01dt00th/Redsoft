@@ -16,41 +16,50 @@ struct ProductListView: View {
                 VStack {
                     SearchBarView()
                     
-                    if #available(iOS 14.0, *) {
-                        ScrollView(.vertical, showsIndicators: false) {
-                            LazyVStack(spacing: 0) {
-                                ForEach(viewModel.list) { product in
-                                    ProductItemView(product: product)
-                                        .padding()
-                                        .onAppear{ self.viewModel.loadNext(product) }
+                    if viewModel.list.isEmpty {
+                        ActivityView()
+                            .padding(.top, 20)
+                        Spacer()
+                    } else {
+                        
+                        if #available(iOS 14.0, *) {
+                            ScrollView(.vertical, showsIndicators: false) {
+                                LazyVStack(spacing: 0) {
+                                    ForEach(viewModel.list) { product in
+                                        ProductItemView(product: product)
+                                            .padding()
+                                            .onAppear{ self.viewModel.loadNext(product) }
+                                    }
                                 }
                             }
-                        }
-                    } else {
-                        List(viewModel.list) { product in
-                            
-                            ProductItemView(product: product)
-                                .onAppear{ self.viewModel.loadNext(product) }
-                            
+                        } else {
+                            List(viewModel.list) { product in
+                                
+                                ProductItemView(product: product)
+                                    .onAppear{ self.viewModel.loadNext(product) }
+                                
+                            }
                         }
                     }
-                    
                 }
                 GeometryReader { proxy in
                     BasketButtonView()
                         .position(x: proxy.size.width - 50, y: proxy.size.height - 70)
                 }
                 
+                
             }.navigationBarHidden(true)
             .navigationBarTitle("")
+            
         }
     }
 }
 
 struct ProductListView_Previews: PreviewProvider {
     static var list = JSONViewModel()
+    static var basket = BasketViewModel()
     
     static var previews: some View {
-        ProductListView().environmentObject(list)
+        ProductListView().environmentObject(list).environmentObject(basket)
     }
 }
