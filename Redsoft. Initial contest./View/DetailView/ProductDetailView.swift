@@ -85,6 +85,7 @@ struct ProductDetailView: View {
             
             Spacer()
         }.padding(.leading)
+        .navigationBarHidden(true)
     }
 }
 

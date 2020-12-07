@@ -60,12 +60,14 @@ struct BasketDetailView: View {
             Divider()
             .padding(.bottom)
             
-        }.navigationBarTitle("")
+        }.navigationBarTitle("Корзина")
         .navigationBarHidden(true)
         .onAppear {
+            self.basketArray.removeAll()
             self.basket.list.forEach { _, value in
                 self.basketArray.append(value)
             }
+
         }
     }
 }

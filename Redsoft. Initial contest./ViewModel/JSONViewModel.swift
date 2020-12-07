@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 class JSONViewModel: ObservableObject {
     
     @Published var list = [Product]()
